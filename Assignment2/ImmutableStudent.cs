@@ -2,17 +2,17 @@ using System;
 
 namespace Assignment2
 {
-    public class Student
+    public record ImmutableStudent
     {
-        public int id { get; }
-        public string givenName { get; set; }
-        public string surName { get; set; }
-        public Status status { get; }
-        public DateTime startDate { get; set; }
-        public DateTime endDate { get; set; }
-        public DateTime graduationDate { get; set; }
+        public int id { get; init; }
+        public string givenName { get; init; }
+        public string surName { get; init; }
+        public Status status { get; init; }
+        public DateTime startDate { get; init; }
+        public DateTime endDate { get; init; }
+        public DateTime graduationDate { get; init; }
 
-        public Student(int id, string GivenName, string Surname, DateTime startDate, DateTime endDate)
+        public ImmutableStudent(int id, string GivenName, string Surname, DateTime startDate, DateTime endDate)
         {
             this.id = id;
             this.givenName = GivenName;
@@ -43,12 +43,6 @@ namespace Assignment2
         {
             return "ID: " + id + " - " + surName + ", " + givenName + "\n" + 
                 "STATUS: " + status + " " + startDate.ToString() + " - " + endDate.ToString() + " (" + graduationDate.ToString() + ")";
-        }
-
-
-        public static void Main(string[] args)
-        {
-
         }
     }
 }
