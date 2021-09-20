@@ -10,7 +10,7 @@ namespace Assignment2.Tests
         {
             DateTime oneYearBack = DateTime.Now.AddYears(-1);
             DateTime twoYearAfter = DateTime.Now.AddYears(2);
-            ImmutableStudent immutablSudent = new ImmutableStudent(1, "Jeppe", "Korgaard", oneYearBack, twoYearAfter);
+            ImmutableStudent immutableStudent = new ImmutableStudent(1, "Jeppe", "Korgaard", oneYearBack, twoYearAfter);
 
             Status expected = Status.Active;
             Status actual = immutableStudent.status;
