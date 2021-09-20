@@ -70,6 +70,5 @@ namespace Assignment2.Tests
 
             Assert.Equal(expected, actual);
         }
-
     }
 }
